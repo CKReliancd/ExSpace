@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5fd5cbf9-2bee-4e7a-a6bf-72e8bc829905" name="Default Changelist" comment="" />
+    <list default="true" id="5fd5cbf9-2bee-4e7a-a6bf-72e8bc829905" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="ExSpace" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -14,11 +34,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$PROJECT_DIR$/../../server/apache-maven-3.5.4" />
-        <option name="userSettingsFile" value="C:\Program Files\server\apache-maven-3.5.4\conf\settings.xml" />
+        <option name="mavenHome" value="D:/server/apache-maven-3.5.4" />
+        <option name="userSettingsFile" value="D:\Server\apache-maven-3.6.2\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -41,13 +64,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/TomcatEx/src/main/java" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="D:/Server/jcip-annotations.jar!/" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15039062" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -87,6 +114,11 @@
       <workItem from="1586356174232" duration="52000" />
       <workItem from="1586357922103" duration="320000" />
       <workItem from="1586358255843" duration="132000" />
+      <workItem from="1586404866324" duration="393000" />
+      <workItem from="1586405597018" duration="260000" />
+      <workItem from="1586405865074" duration="439000" />
+      <workItem from="1586406314119" duration="707000" />
+      <workItem from="1586430311928" duration="114000" />
     </task>
     <servers />
   </component>
@@ -98,28 +130,41 @@
       <screen x="0" y="0" width="1470" height="864" />
     </state>
     <state x="328" y="91" key="#Project_Structure/0.0.1470.864@0.0.1470.864" timestamp="1586176987192" />
-    <state x="192" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586358286440">
-      <screen x="0" y="0" width="1473" height="864" />
+    <state x="250" y="106" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586405661521">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="192" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1473.864@0.0.1473.864" timestamp="1586358286440" />
-    <state x="495" y="305" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1586358238733">
-      <screen x="0" y="0" width="1473" height="864" />
+    <state x="250" y="106" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586405661521" />
+    <state x="645" y="367" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1586405855324">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="495" y="305" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1473.864@0.0.1473.864" timestamp="1586358238733" />
-    <state x="517" y="188" key="FileChooserDialogImpl" timestamp="1586358106265">
-      <screen x="0" y="0" width="1473" height="864" />
+    <state x="645" y="367" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586405855324" />
+    <state x="806" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1586430435055">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="806" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586430435055" />
+    <state x="583" y="192" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1586406231784">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="583" y="192" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586406231784" />
+    <state x="765" y="219" key="FileChooserDialogImpl" timestamp="1586430369553">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="516" y="188" key="FileChooserDialogImpl/0.0.1470.864@0.0.1470.864" timestamp="1586177248020" />
     <state x="517" y="188" key="FileChooserDialogImpl/0.0.1473.864@0.0.1473.864" timestamp="1586358106265" />
-    <state x="216" y="7" key="SettingsEditor" timestamp="1586358383313">
-      <screen x="0" y="0" width="1473" height="864" />
+    <state x="765" y="219" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586430369553" />
+    <state x="333" y="12" key="SettingsEditor" timestamp="1586430456041">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="216" y="7" key="SettingsEditor/0.0.1470.864@0.0.1470.864" timestamp="1586177276211" />
     <state x="216" y="7" key="SettingsEditor/0.0.1473.864@0.0.1473.864" timestamp="1586358383313" />
-    <state x="429" y="261" key="com.intellij.ide.util.TipDialog" timestamp="1586358258401">
-      <screen x="0" y="0" width="1473" height="864" />
+    <state x="333" y="12" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586430456041" />
+    <state x="559" y="314" key="com.intellij.ide.util.TipDialog" timestamp="1586405603869">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="429" y="261" key="com.intellij.ide.util.TipDialog/0.0.1473.864@0.0.1473.864" timestamp="1586358258401" />
+    <state x="559" y="314" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586405603869" />
     <state x="145" y="127" key="new project wizard" timestamp="1586171031755">
       <screen x="0" y="0" width="1470" height="864" />
     </state>
