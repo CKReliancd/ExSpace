@@ -12,5 +12,8 @@
         <module name="DataStruct" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="TomcatEx" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
