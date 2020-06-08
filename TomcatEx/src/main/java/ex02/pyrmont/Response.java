@@ -2,10 +2,7 @@ package ex02.pyrmont;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.ServletResponse;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.Locale;
 
 public class Response implements ServletResponse {
@@ -25,22 +22,55 @@ public class Response implements ServletResponse {
 
     /**
      * this method is used to server a static page
+     *
      * @throws IOException
      */
     public void sendStaticResource() throws IOException {
         byte[] bytes = new byte[BUFFER_SIZE];
         FileInputStream fileInputStream = null;
         try {
-
+            File file = new File(Constants.WEB_ROOT, request.getUri());
+            fileInputStream = new FileInputStream(file);
+            int ch = fileInputStream.read(bytes, 0, BUFFER_SIZE);
+            while (ch != -1) {
+                outputStream.write(bytes, 0, BUFFER_SIZE);
+                ch = fileInputStream.read(bytes, 0, BUFFER_SIZE);
+            }
         } catch (Exception e) {
-            e.printStackTrace();
-        }finally{
-
+            String errorMessage = "HTTP/1.1 404 File Not Found\r\n" +
+                    "Content-Type: text/html\r\n" +
+                    "Content-Length: 23\r\n" +
+                    "\r\n" +
+                    "<h1>File Not Found</h1>";
+            outputStream.write(errorMessage.getBytes());
+        } finally {
+            if (fileInputStream != null)
+                fileInputStream.close();
         }
-
-
     }
 
+    /**
+     * autoflush is true,println() will flush
+     *
+     * @return
+     * @throws IOException
+     */
+    public PrintWriter getWriter() throws IOException {
+        printWriter = new PrintWriter(outputStream, true);
+        return printWriter;
+    }
+
+    public boolean isCommitted() {
+        return false;
+    }
+
+    /**
+     * implementation of ServletResponse
+     *
+     * @throws IOException
+     */
+    public void flushBuffer() throws IOException {
+    }
 
     public String getCharacterEncoding() {
         return null;
@@ -54,9 +84,6 @@ public class Response implements ServletResponse {
         return null;
     }
 
-    public PrintWriter getWriter() throws IOException {
-        return null;
-    }
 
     public void setCharacterEncoding(String s) {
 
@@ -78,16 +105,9 @@ public class Response implements ServletResponse {
         return 0;
     }
 
-    public void flushBuffer() throws IOException {
-
-    }
 
     public void resetBuffer() {
 
-    }
-
-    public boolean isCommitted() {
-        return false;
     }
 
     public void reset() {
