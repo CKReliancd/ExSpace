@@ -73,6 +73,10 @@ public class Request implements ServletRequest {
         return 0;
     }
 
+    public long getContentLengthLong() {
+        return 0;
+    }
+
     public String getContentType() {
         return null;
     }

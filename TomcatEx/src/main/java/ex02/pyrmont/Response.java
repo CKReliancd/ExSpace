@@ -48,30 +48,6 @@ public class Response implements ServletResponse {
                 fileInputStream.close();
         }
     }
-
-    /**
-     * autoflush is true,println() will flush
-     *
-     * @return
-     * @throws IOException
-     */
-    public PrintWriter getWriter() throws IOException {
-        printWriter = new PrintWriter(outputStream, true);
-        return printWriter;
-    }
-
-    public boolean isCommitted() {
-        return false;
-    }
-
-    /**
-     * implementation of ServletResponse
-     *
-     * @throws IOException
-     */
-    public void flushBuffer() throws IOException {
-    }
-
     public String getCharacterEncoding() {
         return null;
     }
@@ -84,12 +60,26 @@ public class Response implements ServletResponse {
         return null;
     }
 
+    /**
+     * autoflush is true,println() will flush
+     *
+     * @return
+     * @throws IOException
+     */
+    public PrintWriter getWriter() throws IOException {
+        printWriter = new PrintWriter(outputStream, true);
+        return printWriter;
+    }
 
     public void setCharacterEncoding(String s) {
 
     }
 
     public void setContentLength(int i) {
+
+    }
+
+    public void setContentLengthLong(long l) {
 
     }
 
@@ -105,9 +95,8 @@ public class Response implements ServletResponse {
         return 0;
     }
 
-
-    public void resetBuffer() {
-
+    public boolean isCommitted() {
+        return false;
     }
 
     public void reset() {
@@ -120,5 +109,17 @@ public class Response implements ServletResponse {
 
     public Locale getLocale() {
         return null;
+    }
+
+    /**
+     * implementation of ServletResponse
+     *
+     * @throws IOException
+     */
+    public void flushBuffer() throws IOException {
+    }
+
+    public void resetBuffer() {
+
     }
 }
