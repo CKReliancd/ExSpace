@@ -13,10 +13,6 @@
         <module>JucEx</module>
         <module>Java8</module>
         <module>TomcatEx</module>
-        <module>TomcatEx</module>
-        <module>TomcatEx</module>
-        <module>TomcatEx</module>
-        <module>TomcatEx</module>
     </modules>
 
     <dependencies>

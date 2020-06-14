@@ -1,27 +1,25 @@
 package ex02.pyrmont;
 
-import ex01.pyrmont.HttpServer;
-
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class HttpServer1 {
+public class HttpServer2 {
 
     private static final String SHUTDOWN_COMMAND = "/SHUTDOWN";
 
     private boolean shutdowmn = false;
 
     public static void main(String[] args) {
-        HttpServer1 server = new HttpServer1();
+        HttpServer2 server = new HttpServer2();
         server.await();
     }
 
-    public void await(){
+    public void await() {
 
-        ServerSocket serverSocket  = null;
+        ServerSocket serverSocket = null;
         int port = 8080;
         try {
             serverSocket = new ServerSocket(port,
@@ -32,7 +30,7 @@ public class HttpServer1 {
         }
 
         //Loop waiting for a request
-        while (!shutdowmn){
+        while (!shutdowmn) {
             Socket socket = null;
             InputStream inputStream = null;
             OutputStream outputStream = null;
@@ -52,12 +50,12 @@ public class HttpServer1 {
                 //check if this is a request for a servlet or
                 //a static resource
                 //a request for a servlet begin with "/servlet/"
-                if(request.getUri().startsWith("/servlet/")) {
-                    ServletProcessor1 processor = new ServletProcessor1();
-                    processor.process(request,response);
+                if (request.getUri().startsWith("/servlet/")) {
+                    ServletProcessor2 processor = new ServletProcessor2();
+                    processor.process(request, response);
                 } else {
                     StaticResourceProcessor processor = new StaticResourceProcessor();
-                    processor.process(request,response);
+                    processor.process(request, response);
                 }
                 //Close the socket
                 socket.close();
@@ -70,10 +68,8 @@ public class HttpServer1 {
 
 
         }
-        
-        
-        
-        
+
+
     }
 
 }

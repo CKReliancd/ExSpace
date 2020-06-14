@@ -3,6 +3,7 @@ package ex02.pyrmont;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.ServletResponse;
 import java.io.*;
+import java.nio.channels.FileChannel;
 import java.util.Locale;
 
 public class Response implements ServletResponse {
@@ -29,11 +30,15 @@ public class Response implements ServletResponse {
         byte[] bytes = new byte[BUFFER_SIZE];
         FileInputStream fileInputStream = null;
         try {
-            File file = new File(Constants.WEB_ROOT, request.getUri());
+            File file = new File(Constants.WEB_ROOT+File.separator+File.separator, request.getUri());
+            boolean exists = file.exists();
+            boolean canRead = file.canRead();
             fileInputStream = new FileInputStream(file);
+            long size = fileInputStream.getChannel().size();
             int ch = fileInputStream.read(bytes, 0, BUFFER_SIZE);
             while (ch != -1) {
                 outputStream.write(bytes, 0, BUFFER_SIZE);
+                System.out.println(new String(bytes,0,ch));
                 ch = fileInputStream.read(bytes, 0, BUFFER_SIZE);
             }
         } catch (Exception e) {

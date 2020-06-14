@@ -1,8 +1,6 @@
 package ex02.pyrmont;
 
 import javax.servlet.Servlet;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
 import java.io.File;
 import java.net.URL;
 import java.net.URLClassLoader;
@@ -12,7 +10,7 @@ import java.net.URLStreamHandler;
  * 请求的是一个servlet，则载入相应的servlet类，调用其service()方法，传入servletRequest
  * 对象和servletResponse对象
  */
-public class ServletProcessor1 {
+public class ServletProcessor2 {
 
     public void process(Request request, Response response) {
 
@@ -38,7 +36,7 @@ public class ServletProcessor1 {
             //所以指明第三个参数URLStreamHandler用以区分
 
             URLStreamHandler streamHandler = null;
-            urls[0]= new URL(null,respository,streamHandler);
+            urls[0] = new URL(null, respository, streamHandler);
 
             //urls是一个java.net.URL对象数组，每一个对象都指明了类加载起去哪里加载类。
             //若一个URL以"/"结尾，则表明它指向的是一个目录。否则URL默认指向一个JAR文件，
@@ -56,13 +54,15 @@ public class ServletProcessor1 {
             e.printStackTrace();
         }
 
-        Servlet servlet  = null;
+        Servlet servlet = null;
+        RequestFacade requestFacade = new RequestFacade(request);
+        ResponseFacade responseFacade = new ResponseFacade(response);
         try {
             servlet = (Servlet) myClass.newInstance();
-            servlet.service((ex02.pyrmont.Request)request,(ex02.pyrmont.Response)response);
+            servlet.service(requestFacade, responseFacade);
         } catch (Exception e) {
             e.printStackTrace();
-        }catch (Throwable throwable){
+        } catch (Throwable throwable) {
             throwable.printStackTrace();
         }
 
