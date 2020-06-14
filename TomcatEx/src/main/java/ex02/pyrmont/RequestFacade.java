@@ -8,6 +8,11 @@ import java.util.Enumeration;
 import java.util.Locale;
 import java.util.Map;
 
+/**
+ * 外观类:
+ * 自己写的ex02.pyrmont.Request接口不向外暴露，
+ * 所以用RequestFacade继承ServletRequest接口，暴露RequestFacade的接口
+ */
 public class RequestFacade implements ServletRequest {
     private ServletRequest request = null;
 

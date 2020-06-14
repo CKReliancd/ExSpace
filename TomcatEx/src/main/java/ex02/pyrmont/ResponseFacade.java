@@ -6,6 +6,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Locale;
 
+/**
+ * 外观类:
+ * 自己写的ex02.pyrmont.Response接口不向外暴露，
+ * 所以用ResponseFacade继承ServletResponse接口，暴露ResponseFacade的接口
+ */
 public class ResponseFacade implements ServletResponse {
 
     private ServletResponse response;
