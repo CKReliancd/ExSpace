@@ -1,4 +1,4 @@
-package ex03;
+package ex03.connector.http;
 
 import java.net.InetAddress;
 import java.net.ServerSocket;

@@ -86,12 +86,7 @@
             <version>27.0.1-android</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>RELEASE</version>
-            <scope>compile</scope>
-        </dependency>
+
 
         <!-- servlet依赖的jar包start -->
         <dependency>
@@ -115,8 +110,28 @@
         </dependency>
         <!--jstl标签依赖的jar包end -->
 
+                <dependency>
+                    <groupId>org.junit.jupiter</groupId>
+                    <artifactId>junit-jupiter</artifactId>
+                    <version>RELEASE</version>
+                    <scope>compile</scope>
+                </dependency>
 
     </dependencies>
+    <repositories>
+        <repository>
+            <id>nexus-aliyun</id>
+            <name>Nexus aliyun</name>
+            <layout>default</layout>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
 
 
 </project>

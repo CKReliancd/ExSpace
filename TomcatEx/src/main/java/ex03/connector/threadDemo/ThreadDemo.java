@@ -1,7 +1,6 @@
-package ex03;
+package ex03.connector.threadDemo;
 
 public class ThreadDemo extends Thread {
-
 
     public void run() {
 
