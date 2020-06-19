@@ -1,6 +1,6 @@
 package ex03;
 
-import ex03.connector.http.HttpConnector;
+import ex03.pyrmont.connector.http.HttpConnector;
 
 public class HttpProcessor {
     /**

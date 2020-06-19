@@ -1,9 +1,3 @@
-.idea
-.idea/*
+*.idea
 *.iml
-*/*.iml/*
-DataStruct/DataStruct.iml
-Java8/Java8.iml
-JucEx/JucEx.iml
-TomcatEx/TomcatEx.iml
-
+.idea //

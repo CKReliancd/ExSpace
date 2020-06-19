@@ -1,4 +1,4 @@
-package ex03.connector.http;
+package ex03.pyrmont.connector.http;
 
 import java.io.File;
 

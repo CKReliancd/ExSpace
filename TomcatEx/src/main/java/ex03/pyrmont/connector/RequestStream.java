@@ -1,7 +1,7 @@
-package ex03.connector;
+package ex03.pyrmont.connector;
 
-import ex03.connector.http.Constants;
-import ex03.connector.http.HttpRequest;
+import ex03.pyrmont.connector.http.Constants;
+import ex03.pyrmont.connector.http.HttpRequest;
 import java.io.InputStream;
 import java.io.IOException;
 import javax.servlet.ReadListener;

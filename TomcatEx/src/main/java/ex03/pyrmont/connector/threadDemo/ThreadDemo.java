@@ -1,4 +1,4 @@
-package ex03.connector.threadDemo;
+package ex03.pyrmont.connector.threadDemo;
 
 public class ThreadDemo extends Thread {
 
