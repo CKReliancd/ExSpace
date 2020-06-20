@@ -67,33 +67,19 @@ public class HttpProcessor {
     private void parseRequest(SocketInputStream socketInputStream, OutputStream outputStream)
     throws IOException, ServletException {
 
+        //Parse the incoming request line
+        socketInputStream.readRequestLine(requestLine);
+        String method = new String(requestLine.method, 0, requestLine.methodEnd);
+        String uri = null;
+        String protocol = new String(requestLine.protocol, 0, requestLine.protocolEnd);
 
+        //验证传入的requestline
+        if(method.length() <1) {
+            throw  new Ser
 
+        } else {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        }
 
 
 
