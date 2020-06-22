@@ -65,7 +65,7 @@ public class HttpProcessor {
      * @param outputStream
      */
     private void parseRequest(SocketInputStream socketInputStream, OutputStream outputStream)
-    throws IOException, ServletException {
+            throws IOException, ServletException {
 
         //Parse the incoming request line
         socketInputStream.readRequestLine(requestLine);
@@ -74,10 +74,31 @@ public class HttpProcessor {
         String protocol = new String(requestLine.protocol, 0, requestLine.protocolEnd);
 
         //验证传入的requestline
-        if(method.length() <1) {
-            throw  new Ser
-
+        if (method.length() < 1) {
+            throw new ServletException("Missing HTTP request method");
+        } else if (requestLine.uriEnd < 1) {
+            throw new ServletException("Missing HTTP request URI");
+        }
+        //解析传入的URI中的查询参数
+        int question = requestLine.indexOf("?");
+        if (question >= 0) {
+            request.setQueryString(new String(requestLine.uri, question + 1,
+                    requestLine.uriEnd - question - 1));
+            uri = new String(requestLine.uri, 0, question);
         } else {
+            request.setQueryString(null);
+            uri = new String(requestLine.uri, 0, requestLine.uriEnd);
+        }
+        //用HTTP协议检查URI的绝对路径
+        if (!uri.startsWith("/")){
+            int pos = uri.indexOf("://");
+            //解析出协议和主机名
+            if (pos!=-1){
+                uri = "";
+            }else {
+
+            }
+
 
         }
 
