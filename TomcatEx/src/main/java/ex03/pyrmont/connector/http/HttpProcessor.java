@@ -17,6 +17,9 @@ import java.net.Socket;
  */
 public class HttpProcessor {
 
+    public HttpProcessor(HttpConnector httpConnector){
+        this.connector = httpConnector;
+    }
 
     /**
      * 与此处理器相关联的Http连接器(HttpConnector)
@@ -34,6 +37,17 @@ public class HttpProcessor {
      */
     protected StringManager sm = StringManager.getManager("ex03.pyrmont.connector.http");
 
+    /**
+     * process()接受来自HTTP请求的socket。
+     * 对于每一个传入的HTTP请求，完成4个操作
+     *      1、创建一个HttpRequest对象；
+     *      2、创建一个HttpResponse对象；
+     *      3、解析HTTP请求的第一行内容和请求头信息，填充HttpRequest对象；
+     *      4、将HttpRequest对象和HttpResponse对象传递给servletProcessor或
+     *      staticResourceProcessor的process()方法。servletProcessor类对调用请求的
+     *      servlet实例的service()方法，StaticResourceProcessor类会将请求的静态资源发送给客户端
+     * @param socket
+     */
     public void process(Socket socket) {
         SocketInputStream socketInputStream = null;
         OutputStream outputStream = null;
