@@ -1,5 +1,6 @@
 package ex03.pyrmont.connector.http;
 
+import ex03.pyrmont.connector.RequestStream;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import org.apache.catalina.util.ParameterMap;

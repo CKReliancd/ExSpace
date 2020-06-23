@@ -25,9 +25,9 @@ public class RequestStream extends ServletInputStream {
 
     // ----------------------------------------------------------- Constructors
 
-
     /**
      * Construct a servlet input stream associated with the specified Request.
+     *
      * @param request The associated request
      */
     public RequestStream(HttpRequest request) {

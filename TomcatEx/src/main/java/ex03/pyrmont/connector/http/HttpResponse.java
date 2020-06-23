@@ -5,9 +5,7 @@ import com.google.common.collect.Lists;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -20,8 +18,11 @@ import java.util.Locale;
  */
 public class HttpResponse implements HttpServletResponse {
 
+    // the default buffer size
+    private static final int BUFFER_SIZE = 1024;
     HttpRequest request;
     OutputStream output;
+    PrintWriter writer;
     /**
      * Has this response been committed yet?
      */
@@ -46,11 +47,56 @@ public class HttpResponse implements HttpServletResponse {
     public HttpResponse(OutputStream output) {
         this.output = output;
     }
-
+    /**
+     * call this method to send headers and response to the output
+     */
+    public void finishResponse() {
+        // sendHeaders();
+        // Flush and close the appropriate output mechanism
+        if (writer != null) {
+            writer.flush();
+            writer.close();
+        }
+    }
     public void setRequest(HttpRequest request) {
         this.request = request;
     }
 
+
+    /* This method is used to serve a static page */
+    public void sendStaticResource() throws IOException {
+        byte[] bytes = new byte[BUFFER_SIZE];
+        FileInputStream fis = null;
+        try {
+            /* request.getUri has been replaced by request.getRequestURI */
+            File file = new File(Constants.WEB_ROOT, request.getRequestURI());
+            fis = new FileInputStream(file);
+      /*
+         HTTP Response = Status-Line
+           *(( general-header | response-header | entity-header ) CRLF)
+           CRLF
+           [ message-body ]
+         Status-Line = HTTP-Version SP Status-Code SP Reason-Phrase CRLF
+      */
+            int ch = fis.read(bytes, 0, BUFFER_SIZE);
+            while (ch!=-1) {
+                output.write(bytes, 0, ch);
+                ch = fis.read(bytes, 0, BUFFER_SIZE);
+            }
+        }
+        catch (FileNotFoundException e) {
+            String errorMessage = "HTTP/1.1 404 File Not Found\r\n" +
+                    "Content-Type: text/html\r\n" +
+                    "Content-Length: 23\r\n" +
+                    "\r\n" +
+                    "<h1>File Not Found</h1>";
+            output.write(errorMessage.getBytes());
+        }
+        finally {
+            if (fis!=null)
+                fis.close();
+        }
+    }
 
     @Override
     public void addCookie(Cookie cookie) {
