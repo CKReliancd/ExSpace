@@ -6,10 +6,7 @@ import javax.servlet.ServletOutputStream;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Locale;
+import java.util.*;
 
 /**
  * @author Administrator
@@ -158,7 +155,7 @@ public class HttpResponse implements HttpServletResponse {
         if (isCommitted()) {
             return;
         }
-        ArrayList<Object> values = Lists.newArrayList();
+        List<Object> values = Lists.newArrayList();
         values.add(value);
         synchronized (headers) {
             headers.put(name, values);

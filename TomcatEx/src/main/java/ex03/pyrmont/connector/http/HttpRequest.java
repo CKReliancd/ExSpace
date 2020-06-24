@@ -47,14 +47,14 @@ public class HttpRequest implements HttpServletRequest {
     protected String contextPath = "";
 
     /**
-     * The set of cookies associated with this Request.
-     */
-    protected ArrayList cookies = new ArrayList();
-
-    /**
      * 请求里的请求头，key是名，value是数组
      */
     protected Map headers = Maps.newHashMap();
+
+    /**
+     * The set of cookies associated with this Request.
+     */
+    protected ArrayList cookies = new ArrayList();
 
     /**
      * 请求里经过解析的参数，参数可以通过调用重载方法getParameter()获取,
