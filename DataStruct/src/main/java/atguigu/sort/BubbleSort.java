@@ -3,22 +3,11 @@ package atguigu.sort;
 import java.time.LocalDateTime;
 
 /**
- * 冒泡排序，花了十二秒多
+ * 冒泡排序
  */
 public class BubbleSort {
 
-    public static void main(String[] args) {
-
-        int[] arr = new int[80000];
-
-        for (int i = 0; i < 80000; i++) {
-            arr[i] = (int) (Math.random() * 8000000);
-        }
-
-//        int[] arr = new int[]{-1, -2, 10, 9, 20, 11};
-
-//        System.out.println("排序前的数组：" + Arrays.toString(arr));
-        System.out.println("排序前的时间：" + LocalDateTime.now());
+    public static void bubbleSort(int[] arr) {
 
         int temp = 0;
         boolean flag = false;
@@ -37,10 +26,6 @@ public class BubbleSort {
                 flag = false;
             }
         }
-
-        System.out.println("排序后的时间：" + LocalDateTime.now());
-//        System.out.println("排序后的数组：" + Arrays.toString(arr));
-
     }
 
 
