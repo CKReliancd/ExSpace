@@ -1,11 +1,22 @@
 package atguigu.sort;
 
 import java.time.LocalDateTime;
+import java.util.Arrays;
 
 /**
  * 冒泡排序
  */
 public class BubbleSort {
+
+    public static void main(String[] args) {
+
+        int[] arr = new int[]{101, 56, 39, 47, 1};
+
+        System.out.println("排序之前:" + Arrays.toString(arr));
+
+        bubbleSort(arr);
+
+    }
 
     public static void bubbleSort(int[] arr) {
 

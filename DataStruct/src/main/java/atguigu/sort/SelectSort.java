@@ -9,6 +9,18 @@ import java.util.Arrays;
  */
 public class SelectSort {
 
+    public static void main(String[] args) {
+
+        int[] arr = new int[]{101, 56, 39, 47, 1};
+
+        System.out.println("排序之前:" + Arrays.toString(arr));
+
+        selectSort(arr);
+
+        System.out.println("排序之后:" + Arrays.toString(arr));
+
+    }
+
     /**
      * 选择排序
      *

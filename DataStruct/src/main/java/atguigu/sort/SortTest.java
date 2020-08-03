@@ -10,6 +10,7 @@ import java.util.Arrays;
  * ---------i7770HQ花了12秒多<p>
  * ---------Intel(R) Core(TM) i5-8500 CPU @ 3.20GHz (6 CPUs), ~3.0GHz 花了9.19秒<p>
  * ----选择排序：1.723秒
+ * ----插入排序：0.5秒
  * @Date 2020/8/3 13:59
  */
 public class SortTest {
@@ -25,7 +26,10 @@ public class SortTest {
         System.out.println("排序前的时间：" + LocalDateTime.now());
 
 //        BubbleSort.bubbleSort(arr);
-        SelectSort.selectSort(arr);
+
+//        SelectSort.selectSort(arr);
+
+        InsertSort.inserSort(arr);
 
         System.out.println("排序后的时间：" + LocalDateTime.now());
 //        System.out.println("排序后的数组：" + Arrays.toString(arr));
