@@ -11,6 +11,7 @@ import java.util.Arrays;
  * ---------Intel(R) Core(TM) i5-8500 CPU @ 3.20GHz (6 CPUs), ~3.0GHz 花了9.19秒<p>
  * ----选择排序：1.723秒
  * ----插入排序：0.5秒
+ * ----希尔排序: 0.020秒
  * @Date 2020/8/3 13:59
  */
 public class SortTest {
@@ -29,7 +30,8 @@ public class SortTest {
 
 //        SelectSort.selectSort(arr);
 
-        InsertSort.inserSort(arr);
+//        InsertSort.inserSort(arr);
+        ShellSort.shellSort(arr);
 
         System.out.println("排序后的时间：" + LocalDateTime.now());
 //        System.out.println("排序后的数组：" + Arrays.toString(arr));
