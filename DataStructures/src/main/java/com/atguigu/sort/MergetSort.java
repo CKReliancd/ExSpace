@@ -7,7 +7,7 @@ import java.util.Date;
 public class MergetSort {
 
     public static void main(String[] args) {
-        int[] arr1 = {8, 4, 5, 7, 1, 3, 6, 2}; //
+        int[] arr1 = {8, 4, 7, 5, 3, 1, 6, 2}; //
 
         //测试快排的执行速度
         // 创建要给80000个的随机的数组
