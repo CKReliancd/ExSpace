@@ -9,10 +9,12 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>DataStruct</module>
+        <module>DataStruct_EX</module>
         <module>JucEx</module>
         <module>Java8</module>
         <module>TomcatEx</module>
+        <module>DataStructures</module>
+        <module>Algorithm</module>
     </modules>
 
     <dependencies>

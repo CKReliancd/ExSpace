@@ -12,7 +12,7 @@ public class QuickSort {
     public static void main(String[] args) {
 
 //        int[] arr = {-9, 78, 0, 23, -567, 70};
-        int[] arr = {-9, 78, 0, 23, -567, 70, -1, 900, -4561};
+        int[] arr = {-9, 78, 0, 23, -9, 70, -1, 900, -4561};
 
         int left = 0;
         int right = arr.length - 1;
@@ -28,6 +28,7 @@ public class QuickSort {
 
     /**
      * 快速排序
+     * {-9, 78, 0, 23, -567, 70, -1, 900, -4561};
      *
      * @param arr
      * @param left
@@ -51,11 +52,11 @@ public class QuickSort {
             while (arr[r] > pivot) {
                 r--;
             }
-            //如果左边下表大过右边，说明左小右大的顺序已经做好，需要递归再次确定
+            //如果左边下标大过右边，说明左小右大的顺序已经做好，需要递归再次确定
             if (l >= r) {
                 break;
             }
-            //如果左边或者右边存在比arr[pivot]大或者小的值，则开始交换
+            //走到这里说明左边或者右边存在比arr[pivot]大或者小的值，则开始交换
             swap(arr, l, r);
             //如果交换完后发现，左边的值等于pivot,则往左边再移一位
             if (arr[l] == pivot) {
@@ -95,7 +96,7 @@ public class QuickSort {
      */
     private static void swap(int[] arr, int left, int right) {
         //临时变量
-        int temp = 0;
+        int temp;
         temp = arr[left];
         arr[left] = arr[right];
         arr[right] = temp;
