@@ -7,17 +7,56 @@ package chapter01;
  */
 public class ConcurrencyTest {
 
-    public static void main(String[] args) {
+    private static final long count = 100000000l;
 
-        long timeMillis = System.currentTimeMillis();
+    public static void main(String[] args) throws InterruptedException {
+
+        System.out.println("MainThread run start");
+
+        Thread threadA = new Thread(() -> {
+            System.out.println("threadA run start.");
+            try {
+                Thread.sleep(1000);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            System.out.println("threadA run finished.");
+        }, "");
+
+        threadA.join();
+
+        threadA.start();
+
+        Thread.sleep(1000);
+
+        System.out.println("MainThread join before");
+
+
+        System.out.println("MainThread run finished");
 
 
 
+    }
 
+    private static void concurrency() throws InterruptedException {
+        long start = System.currentTimeMillis();
 
-
-
-
-
+        Thread thread = new Thread(
+                () -> {
+                    int a = 0;
+                    for (int i = 0; i < count; i++) {
+                        a += 5;
+                    }
+                    System.out.println(a);
+                }
+                , "TA");
+        thread.start();
+        int b = 0;
+        for (int i = 0; i < count; i++) {
+            b--;
+        }
+        long time = System.currentTimeMillis() - start;
+        thread.join();
+        System.out.println("concurrency :" + time + " ms , b = " + b);
     }
 }
