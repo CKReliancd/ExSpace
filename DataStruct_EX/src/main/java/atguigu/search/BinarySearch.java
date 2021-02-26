@@ -36,7 +36,7 @@ public class BinarySearch {
         int mid = (left + right) / 2;
         int midVal = arr[mid];
 
-        if (findVal > midVal) { // 向 右递归
+        if (findVal > midVal) { //向右递归
             return binarySearch(arr, mid + 1, right, findVal);
         } else if (findVal < midVal) { // 向左递归
             return binarySearch(arr, left, mid - 1, findVal);
