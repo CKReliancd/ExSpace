@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 使用二分查找的前提是数组有序
+ *
  */
 public class BinarySearch {
 
