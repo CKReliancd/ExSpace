@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * master新增
+ * master和new合并之后的新增
  */
 public class BinarySearch {
 
