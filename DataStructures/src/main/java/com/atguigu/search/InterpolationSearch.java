@@ -1,8 +1,6 @@
 package com.atguigu.search;
 
-import java.util.Arrays;
-
-public class InsertValueSearch {
+public class InterpolationSearch {
 
 	public static void main(String[] args) {
 		
@@ -13,7 +11,7 @@ public class InsertValueSearch {
 		
 		int arr[] = { 1, 8, 10, 89,1000,1000, 1234 };
 		
-		int index = insertValueSearch(arr, 0, arr.length - 1, 1234);
+		int index = interpolationSearch(arr, 0, arr.length - 1, 1234);
 		//int index = binarySearch(arr, 0, arr.length, 1);
 		System.out.println("index = " + index);
 		
@@ -34,10 +32,8 @@ public class InsertValueSearch {
 		} else if (findVal < midVal) { // 向左递归
 			return binarySearch(arr, left, mid - 1, findVal);
 		} else {
-
 			return mid;
 		}
-
 	}
 
 	//编写插值查找算法
@@ -50,7 +46,7 @@ public class InsertValueSearch {
 	 * @param findVal 查找值
 	 * @return 如果找到，就返回对应的下标，如果没有找到，返回-1
 	 */
-	public static int insertValueSearch(int[] arr, int left, int right, int findVal) { 
+	public static int interpolationSearch(int[] arr, int left, int right, int findVal) {
 
 		System.out.println("插值查找次数~~");
 		
@@ -64,9 +60,9 @@ public class InsertValueSearch {
 		int mid = left + (right - left) * (findVal - arr[left]) / (arr[right] - arr[left]);
 		int midVal = arr[mid];
 		if (findVal > midVal) { // 说明应该向右边递归
-			return insertValueSearch(arr, mid + 1, right, findVal);
+			return interpolationSearch(arr, mid + 1, right, findVal);
 		} else if (findVal < midVal) { // 说明向左递归查找
-			return insertValueSearch(arr, left, mid - 1, findVal);
+			return interpolationSearch(arr, left, mid - 1, findVal);
 		} else {
 			return mid;
 		}
