@@ -3,107 +3,108 @@ package atguigu.search;
 import java.util.ArrayList;
 import java.util.List;
 
-//×¢Òâ£ºÊ¹ÓÃ¶ş·Ö²éÕÒµÄÇ°ÌáÊÇ ¸ÃÊı×éÊÇÓĞĞòµÄ.
+/**
+ * ä½¿ç”¨äºŒåˆ†æŸ¥æ‰¾çš„å‰ææ˜¯æ•°ç»„æœ‰åº
+ */
 public class BinarySearch {
 
-	public static void main(String[] args) {
-		//int arr[] = { 1, 8, 10, 89,1000,1000, 1234 };
-		int arr[] = { 1, 2, 2, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10 , 11, 12, 13,14,15,16,17,18,18,18,18,18,19,20 };
+    public static void main(String[] args) {
+        //int arr[] = { 1, 8, 10, 89,1000,1000, 1234 };
+        int arr[] = {1, 2, 2, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 18, 18, 18, 18, 19, 20};
 
-		//
+        //
 //		int resIndex = binarySearch(arr, 0, arr.length - 1, 1000);
 //		System.out.println("resIndex=" + resIndex);
-		
-		List<Integer> resIndexList = binarySearch2(arr, 0, arr.length - 1, 2);
-		System.out.println("resIndexList=" + resIndexList);
-	}
 
-	// ¶ş·Ö²éÕÒËã·¨
-	/**
-	 * 
-	 * @param arr
-	 *            Êı×é
-	 * @param left
-	 *            ×ó±ßµÄË÷Òı
-	 * @param right
-	 *            ÓÒ±ßµÄË÷Òı
-	 * @param findVal
-	 *            Òª²éÕÒµÄÖµ
-	 * @return Èç¹ûÕÒµ½¾Í·µ»ØÏÂ±ê£¬Èç¹ûÃ»ÓĞÕÒµ½£¬¾Í·µ»Ø -1
-	 */
-	public static int binarySearch(int[] arr, int left, int right, int findVal) {
-		
+        List<Integer> resIndexList = binarySearch2(arr, 0, arr.length - 1, 2);
+        System.out.println("resIndexList=" + resIndexList);
+    }
 
-		// µ± left > right Ê±£¬ËµÃ÷µİ¹éÕû¸öÊı×é£¬µ«ÊÇÃ»ÓĞÕÒµ½
-		if (left > right) {
-			return -1;
-		}
-		int mid = (left + right) / 2;
-		int midVal = arr[mid];
+    // ï¿½ï¿½ï¿½Ö²ï¿½ï¿½ï¿½ï¿½ã·¨
 
-		if (findVal > midVal) { // Ïò ÓÒµİ¹é
-			return binarySearch(arr, mid + 1, right, findVal);
-		} else if (findVal < midVal) { // Ïò×óµİ¹é
-			return binarySearch(arr, left, mid - 1, findVal);
-		} else {
-			
-			return mid;
-		}
-	}
-	
-	//Íê³ÉÒ»¸ö¿ÎºóË¼¿¼Ìâ:
-	/*
-	 * ¿ÎºóË¼¿¼Ìâ£º {1,8, 10, 89, 1000, 1000£¬1234} µ±Ò»¸öÓĞĞòÊı×éÖĞ£¬
-	 * ÓĞ¶à¸öÏàÍ¬µÄÊıÖµÊ±£¬ÈçºÎ½«ËùÓĞµÄÊıÖµ¶¼²éÕÒµ½£¬±ÈÈçÕâÀïµÄ 1000
-	 * 
-	 * Ë¼Â··ÖÎö
-	 * 1. ÔÚÕÒµ½mid Ë÷ÒıÖµ£¬²»ÒªÂíÉÏ·µ»Ø
-	 * 2. Ïòmid Ë÷ÒıÖµµÄ×ó±ßÉ¨Ãè£¬½«ËùÓĞÂú×ã 1000£¬ µÄÔªËØµÄÏÂ±ê£¬¼ÓÈëµ½¼¯ºÏArrayList
-	 * 3. Ïòmid Ë÷ÒıÖµµÄÓÒ±ßÉ¨Ãè£¬½«ËùÓĞÂú×ã 1000£¬ µÄÔªËØµÄÏÂ±ê£¬¼ÓÈëµ½¼¯ºÏArrayList
-	 * 4. ½«Arraylist·µ»Ø
-	 */
-	public static List<Integer> binarySearch2(int[] arr, int left, int right, int findVal) {
+    /**
+     * @param arr     æ•°ç»„
+     * @param left    å·¦è¾¹çš„ç´¢å¼•
+     * @param right   å³è¾¹çš„ç´¢å¼•
+     * @param findVal è¦æŸ¥æ‰¾çš„å€¼
+     * @return å¦‚æœæ‰¾åˆ°å°±è¿”å›ä¸‹æ ‡ï¼Œå¦‚æœæ²¡æœ‰æ‰¾åˆ°ï¼Œå°±è¿”å› -1
+     */
+    public static int binarySearch(int[] arr, int left, int right, int findVal) {
 
-		System.out.println("hello~");
-		// µ± left > right Ê±£¬ËµÃ÷µİ¹éÕû¸öÊı×é£¬µ«ÊÇÃ»ÓĞÕÒµ½
-		if (left > right) {
-			return new ArrayList<Integer>();
-		}
-		int mid = (left + right) / 2;
-		int midVal = arr[mid];
 
-		//ÒòÎª¶ş·Ö²éÕÒÊÇ½¨Á¢ÔÚÊı×é»ò¼¯ºÏÓĞĞòµÄÇ°ÌáÖ®ÏÂ£¬ÄÇÃ´Ö»ÒªÃ»ÕÒµ½£¬¾Í²»ĞèÒªaddAll·½·¨·µ»ØµÄ¼¯ºÏ
-		if (findVal > midVal) { //ÏòÓÒµİ¹é
-			return binarySearch2(arr, mid + 1, right, findVal);
-		} else if (findVal < midVal) { //Ïò×óµİ¹é
-			return binarySearch2(arr, left, mid - 1, findVal);
-		} else {
-			List<Integer> resIndexlist = new ArrayList<Integer>();
-			//Ïòmid Ë÷ÒıÖµµÄ×ó±ßÉ¨Ãè£¬½«ËùÓĞÂú×ã 1000£¬ µÄÔªËØµÄÏÂ±ê£¬¼ÓÈëµ½¼¯ºÏArrayList
-			int temp = mid - 1;
-			while(true) {
-				if (temp < 0 || arr[temp] != findVal) {//ÍË³ö
-					break;
-				}
-				//·ñÔò£¬¾Ítemp ·ÅÈëµ½ resIndexlist
-				resIndexlist.add(temp);
-				temp -= 1; //temp×óÒÆ
-			}
-			resIndexlist.add(mid);  //
-			
-			//Ïòmid Ë÷ÒıÖµµÄÓÒ±ßÉ¨Ãè£¬½«ËùÓĞÂú×ã 1000£¬ µÄÔªËØµÄÏÂ±ê£¬¼ÓÈëµ½¼¯ºÏArrayList
-			temp = mid + 1;
-			while(true) {
-				if (temp > arr.length - 1 || arr[temp] != findVal) {//ÍË³ö
-					break;
-				}
-				//·ñÔò£¬¾Ítemp ·ÅÈëµ½ resIndexlist
-				resIndexlist.add(temp);
-				temp += 1; //tempÓÒÒÆ
-			}
-			
-			return resIndexlist;
-		}
+        // å½“ left > right æ—¶ï¼Œè¯´æ˜é€’å½’æ•´ä¸ªæ•°ç»„ï¼Œä½†æ˜¯æ²¡æœ‰æ‰¾åˆ°
+        if (left > right) {
+            return -1;
+        }
+        int mid = (left + right) / 2;
+        int midVal = arr[mid];
 
-	}
+        if (findVal > midVal) { // å‘ å³é€’å½’
+            return binarySearch(arr, mid + 1, right, findVal);
+        } else if (findVal < midVal) { // å‘å·¦é€’å½’
+            return binarySearch(arr, left, mid - 1, findVal);
+        } else {
+
+            return mid;
+        }
+    }
+
+    /*
+     * è¯¾åæ€è€ƒé¢˜ï¼š {1,8, 10, 89, 1000, 1000ï¼Œ1234} å½“ä¸€ä¸ªæœ‰åºæ•°ç»„ä¸­ï¼Œ
+     * æœ‰å¤šä¸ªç›¸åŒçš„æ•°å€¼æ—¶ï¼Œå¦‚ä½•å°†æ‰€æœ‰çš„æ•°å€¼éƒ½æŸ¥æ‰¾åˆ°ï¼Œæ¯”å¦‚è¿™é‡Œçš„ 1000
+     *
+     * æ€è·¯åˆ†æ
+     * 1. åœ¨æ‰¾åˆ°mid ç´¢å¼•å€¼ï¼Œä¸è¦é©¬ä¸Šè¿”å›
+     * 2. å‘mid ç´¢å¼•å€¼çš„å·¦è¾¹æ‰«æï¼Œå°†æ‰€æœ‰æ»¡è¶³ 1000ï¼Œ çš„å…ƒç´ çš„ä¸‹æ ‡ï¼ŒåŠ å…¥åˆ°é›†åˆArrayList
+     * 3. å‘mid ç´¢å¼•å€¼çš„å³è¾¹æ‰«æï¼Œå°†æ‰€æœ‰æ»¡è¶³ 1000ï¼Œ çš„å…ƒç´ çš„ä¸‹æ ‡ï¼ŒåŠ å…¥åˆ°é›†åˆArrayList
+     * 4. å°†Arraylistè¿”å›
+     */
+    public static List<Integer> binarySearch2(int[] arr, int left, int right, int findVal) {
+
+        System.out.println("hello~");
+        // å½“ left > right æ—¶ï¼Œè¯´æ˜é€’å½’æ•´ä¸ªæ•°ç»„ï¼Œä½†æ˜¯æ²¡æœ‰æ‰¾åˆ°
+        if (left > right) {
+            return new ArrayList<Integer>();
+        }
+        int mid = (left + right) / 2;
+        int midVal = arr[mid];
+
+        if (findVal > midVal) {  // å‘ å³é€’å½’
+            return binarySearch2(arr, mid + 1, right, findVal);
+        } else if (findVal < midVal) { // å‘å·¦é€’å½’
+            return binarySearch2(arr, left, mid - 1, findVal);
+        } else {
+            List<Integer> resIndexlist = new ArrayList<Integer>();
+			/**
+			 *  æ€è·¯åˆ†æ
+			 *  1. åœ¨æ‰¾åˆ°mid ç´¢å¼•å€¼ï¼Œä¸è¦é©¬ä¸Šè¿”å›
+			 *  2. å‘mid ç´¢å¼•å€¼çš„å·¦è¾¹æ‰«æï¼Œå°†æ‰€æœ‰æ»¡è¶³ 1000ï¼Œ çš„å…ƒç´ çš„ä¸‹æ ‡ï¼ŒåŠ å…¥åˆ°é›†åˆArrayList
+			 *  3. å‘mid ç´¢å¼•å€¼çš„å³è¾¹æ‰«æï¼Œå°†æ‰€æœ‰æ»¡è¶³ 1000ï¼Œ çš„å…ƒç´ çš„ä¸‹æ ‡ï¼ŒåŠ å…¥åˆ°é›†åˆArrayList
+			 *  4. å°†Arraylistè¿”å›
+			 */
+            int temp = mid - 1;
+			//å‘mid ç´¢å¼•å€¼çš„å·¦è¾¹æ‰«æï¼Œå°†æ‰€æœ‰æ»¡è¶³ 1000ï¼Œ çš„å…ƒç´ çš„ä¸‹æ ‡ï¼ŒåŠ å…¥åˆ°é›†åˆArrayList
+            while (true) {
+                if (temp < 0 || arr[temp] != findVal) {//ï¿½Ë³ï¿½
+                    break;
+                }
+                resIndexlist.add(temp);
+                temp -= 1;
+            }
+            resIndexlist.add(mid);
+
+			//å‘mid ç´¢å¼•å€¼çš„å³è¾¹æ‰«æï¼Œå°†æ‰€æœ‰æ»¡è¶³ 1000ï¼Œ çš„å…ƒç´ çš„ä¸‹æ ‡ï¼ŒåŠ å…¥åˆ°é›†åˆArrayList
+            temp = mid + 1;
+            while (true) {
+                if (temp > arr.length - 1 || arr[temp] != findVal) {//ï¿½Ë³ï¿½
+                    break;
+                }
+                resIndexlist.add(temp);
+                temp += 1;
+            }
+
+            return resIndexlist;
+        }
+
+    }
 }
