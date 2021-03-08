@@ -14,7 +14,6 @@ public class InterpolationSearch {
         int i = interpolationSearch(arr, 0, arr.length - 1, 8);
 
         System.out.println(i);
-
     }
 
     /**
