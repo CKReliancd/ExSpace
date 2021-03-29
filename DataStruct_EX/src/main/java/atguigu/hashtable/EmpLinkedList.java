@@ -10,13 +10,13 @@ public class EmpLinkedList {
 
     public Emp findEmpById(int id) {
         if (head == null) {
-            System.out.println("Á´±íÎª¿Õ£¡");
+            System.out.println("é“¾è¡¨ä¸ºç©ºï¼");
             return null;
         }
         Emp temp = head;
         while (true) {
             if (temp == null) {
-                System.out.println("Ã»ÕÒµ½Id¶ÔÓ¦½Úµã");
+                System.out.printf("æ²¡æ‰¾åˆ°id:%då¯¹åº”èŠ‚ç‚¹", id);
                 return null;
             }
             if (temp.getId() == id) {
@@ -27,21 +27,27 @@ public class EmpLinkedList {
         }
     }
 
+    /**
+     * åˆ é™¤èŠ‚ç‚¹
+     *
+     * @param id
+     */
     public void delete(int id) {
         if (head == null) {
-            System.out.println("Á´±íÎª¿Õ£¡");
+            System.out.println("é“¾è¡¨ä¸ºç©ºï¼");
             return;
         }
         int headId = head.getId();
         if (headId == id) {
+            //å¤´èŠ‚ç‚¹çš„ä¸‹ä¸€ä¸ªå‡ ç‚¹åšä¸ºå¤´èŠ‚ç‚¹
             head = head.next;
-            System.out.printf("É¾³ı½Úµã:%s", head.toString());
+            System.out.printf("åˆ é™¤èŠ‚ç‚¹:%s", head.toString());
             return;
         }
         Emp temp = head;
         while (true) {
             if (temp == null || temp.next == null) {
-                System.out.println("Ã»ÕÒµ½¶ÔÓ¦IDµÄ½Úµã");
+                System.out.println("æ²¡æ‰¾åˆ°å¯¹åº”IDçš„èŠ‚ç‚¹");
                 return;
             }
             if (temp.next.getId() == id) {
@@ -49,18 +55,18 @@ public class EmpLinkedList {
             }
             temp = temp.next;
         }
-        System.out.printf("ÒÑÉ¾³ı½Úµã£º%s", temp.next.toString());
+        System.out.printf("å·²åˆ é™¤èŠ‚ç‚¹ï¼š%s", temp.next.toString());
         temp.next = temp.next.next;
     }
 
     /**
-     * Õ¹Ê¾
+     * å±•ç¤º
      *
      * @param i
      */
     public void showLinkedList(int i) {
         if (head == null) {
-            System.out.printf("µÚi%dÌõÁ´±íÎª¿Õ");
+            System.out.println("ç¬¬" + i + "æ¡é“¾è¡¨ä¸ºç©º");
             return;
         }
         Emp temp = head;
@@ -68,14 +74,14 @@ public class EmpLinkedList {
             if (temp == null) {
                 break;
             }
-            System.out.printf("µÚi%dÌõÁ´±í%s", i, temp.toString());
+            System.out.printf(" ç¬¬%dæ¡é“¾è¡¨%s", i, temp.toString());
             temp = temp.next;
         }
         System.out.println();
     }
 
     /**
-     * ĞÂÔö
+     * æ–°å¢
      *
      * @param emp
      */

@@ -11,6 +11,18 @@ public class HashTable {
         }
     }
 
+    /**
+     * 通过ID查找对应Emp
+     *
+     * @param id
+     * @return
+     */
+    public Emp findEmpById(int id) {
+        int no = hashFun(id);
+        Emp emp = empLinkedListArray[no].findEmpById(id);
+        return emp;
+    }
+
     public void list() {
         for (int i = 0; i < empLinkedListArray.length; i++) {
             empLinkedListArray[i].showLinkedList(i);
@@ -18,7 +30,7 @@ public class HashTable {
     }
 
     /**
-     * HashTable����
+     * HashTable新增
      *
      * @param emp
      */
