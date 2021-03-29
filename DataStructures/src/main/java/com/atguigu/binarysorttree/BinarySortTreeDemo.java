@@ -42,10 +42,7 @@ public class BinarySortTreeDemo {
 //´´½¨¶þ²æÅÅÐòÊ÷
 class BinarySortTree {
 	private Node root;
-	
-	
-	
-	
+
 	public Node getRoot() {
 		return root;
 	}

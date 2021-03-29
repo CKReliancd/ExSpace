@@ -10,6 +10,7 @@ public class EmpLinkedList {
     public Emp findEmpById(int id) {
         if (head == null) {
             System.out.println("链表为空！");
+
             return null;
         }
         Emp temp = head;
@@ -34,6 +35,7 @@ public class EmpLinkedList {
     public void delete(int id) {
         if (head == null) {
             System.out.println("链表为空！");
+
             return;
         }
         int headId = head.getId();
@@ -80,7 +82,11 @@ public class EmpLinkedList {
     }
 
     /**
+     * <<<<<<< Updated upstream:DataStruct_EX/src/main/java/com/atguigu/hashtable/EmpLinkedList.java
      * 新增
+     * =======
+     * ����
+     * >>>>>>> Stashed changes:DataStruct_EX/src/main/java/atguigu/hashtable/EmpLinkedList.java
      *
      * @param emp
      */
