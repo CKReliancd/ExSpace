@@ -1,4 +1,4 @@
-package atguigu.utils;
+package com.atguigu.utils;
 
 import kd.bos.context.RequestContext;
 import kd.bos.mutex.DataMutex;

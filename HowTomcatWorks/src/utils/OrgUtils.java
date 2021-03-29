@@ -1,4 +1,4 @@
-package atguigu.utils;
+package com.atguigu.utils;
 
 import com.google.common.collect.Maps;
 import kd.bos.context.RequestContext;

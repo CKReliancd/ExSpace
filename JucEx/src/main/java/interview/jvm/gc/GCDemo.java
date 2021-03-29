@@ -34,7 +34,7 @@ public class GCDemo {
 
         System.out.println("*******GCDemo hello");
         try {
-            String str = "atguigu";
+            String str = "com.atguigu";
             while (true) {
                 str += str + new Random().nextInt(7777777) + new Random().nextInt(88888);
                 str.intern();
