@@ -1,6 +1,6 @@
 package com.atguigu.java8;
 
-import com.atguigu.java8.Employee.Status;
+import com.atguigu.exer.Status;
 import org.junit.Test;
 
 import java.util.Arrays;

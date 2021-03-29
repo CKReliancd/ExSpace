@@ -74,6 +74,14 @@ public class Employee {
         return "测试方法引用！";
     }
 
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
     @Override
     public int hashCode() {
         final int prime = 31;
