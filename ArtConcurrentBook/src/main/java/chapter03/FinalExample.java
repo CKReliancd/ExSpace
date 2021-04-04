@@ -1,8 +1,8 @@
 package chapter03;
 
 public class FinalExample {
-    int                 i;  //普通变量
-    final int           j;  //final变量
+    int i;  //普通变量
+    final int j;  //final变量
     static FinalExample obj;
 
     public FinalExample() { //构造函数

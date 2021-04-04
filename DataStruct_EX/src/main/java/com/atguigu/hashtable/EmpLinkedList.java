@@ -82,11 +82,7 @@ public class EmpLinkedList {
     }
 
     /**
-     * <<<<<<< Updated upstream:DataStruct_EX/src/main/java/com/atguigu/hashtable/EmpLinkedList.java
      * 新增
-     * =======
-     * ����
-     * >>>>>>> Stashed changes:DataStruct_EX/src/main/java/atguigu/hashtable/EmpLinkedList.java
      *
      * @param emp
      */

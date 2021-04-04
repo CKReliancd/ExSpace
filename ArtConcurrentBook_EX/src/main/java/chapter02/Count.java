@@ -2,7 +2,6 @@ package chapter02;
 
 import com.google.common.collect.Lists;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
