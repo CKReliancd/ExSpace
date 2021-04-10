@@ -1,4 +1,4 @@
-﻿package atguigu.binarytree;
+package atguigu.binarytree;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

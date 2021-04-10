@@ -14,23 +14,23 @@ public class DeadLockDemo {
 
         new Thread(() -> {
             synchronized (A) {
-                System.out.println("t1:获得了锁A");
+                System.out.println("t1:???????A");
                 try {
                     Thread.currentThread().sleep(2000);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
                 synchronized (B) {
-                    System.out.println("t1:获得锁B");
+                    System.out.println("t1:?????B");
                 }
             }
         }, "t1").start();
 
         new Thread(() -> {
             synchronized (B) {
-                System.out.println("t2获得锁B");
+                System.out.println("t2?????B");
                 synchronized (A) {
-                    System.out.println("t2获得锁A");
+                    System.out.println("t2?????A");
                 }
             }
         }, "t2").start();

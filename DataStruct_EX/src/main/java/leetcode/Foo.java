@@ -1,7 +1,6 @@
 package leetcode;
 
 import java.text.MessageFormat;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class Foo {
 

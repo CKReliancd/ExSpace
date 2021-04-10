@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class SynchronizedTest {
 
-    //共享资源
+    //???????
     static AtomicInteger i = new AtomicInteger();
 
     public static void main(String[] args) throws InterruptedException {
@@ -43,7 +43,7 @@ public class SynchronizedTest {
     }
 
     /**
-     * synchronized 修饰实例方法
+     * synchronized ???????????
      */
     public static void increase() {
         i.getAndIncrement();
