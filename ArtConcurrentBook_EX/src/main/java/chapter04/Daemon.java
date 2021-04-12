@@ -16,8 +16,7 @@ public class Daemon {
     static class DaemonRunner implements Runnable {
         @Override
         public void run() {
-            System.out.println(Thread.currentThread().getName()+" in()" +
-                    "=================");
+            System.out.println(Thread.currentThread().getName()+" in() =================");
             try {
                 SleepUtils.second(10);
             } finally {
