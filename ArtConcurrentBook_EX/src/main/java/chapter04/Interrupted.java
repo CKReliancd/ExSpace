@@ -36,7 +36,6 @@ public class Interrupted {
         //从结果可以看出，抛出InterruptedException的线程SleepThread，其中中断标志位被清除，
         //而一直忙碌着的BusyThread，中断标志位没有被清除
 
-
         //防止子线程立刻退出
         TimeUnit.SECONDS.sleep(2);
     }
