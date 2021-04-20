@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-public class WaitNotify {
+public class WaitNotify_Timeout {
 
     static boolean flag = true;
     static Object lock = new Object();
@@ -24,30 +24,18 @@ public class WaitNotify {
         public void run() {
             //加锁，拥有Lock的monitor
             synchronized (lock) {
-
-                System.out.println(Thread.currentThread() + " hold lock.@ " +
-                        new SimpleDateFormat("HH:mm:ss").format(new Date()));
-
                 //当条件不满足，继续wait，同时释放lock的锁
                 while (flag) {
-
                     System.out.println(Thread.currentThread() + " flag is true. wait@ " +
                             new SimpleDateFormat("HH:mm:ss").format(new Date()));
-
                     try {
                         lock.wait();
                     } catch (InterruptedException e) {
                     }
                 }
-
                 System.out.println(Thread.currentThread() + " flag is false. running@ " +
                         new SimpleDateFormat("HH:mm:ss").format(new Date()));
-
             }
-
-            System.out.println(Thread.currentThread() + " release lock.@" +
-                    new SimpleDateFormat("HH:mm:ss").format(new Date()));
-
         }
     }
 
@@ -58,7 +46,6 @@ public class WaitNotify {
             synchronized (lock) {
                 //获取lock的锁，然后进行通知，通知使不会释放lock的锁
                 //直到当前线程释放了lock后，WaitThread才能从wait方法中返回
-
                 System.out.println(Thread.currentThread() + " hold lock. " +
                         "notify @ " + new SimpleDateFormat("HH:mm:ss").format(new Date()));
 
@@ -67,9 +54,6 @@ public class WaitNotify {
                 SleepUtils.second(5);
             }
 
-            System.out.println(Thread.currentThread() + " release lock.@ " +
-                    new SimpleDateFormat("HH:mm:ss").format(new Date()));
-
             synchronized (lock) {
 
                 System.out.println(Thread.currentThread() + " hold lock again. " +
@@ -77,10 +61,6 @@ public class WaitNotify {
 
                 SleepUtils.second(5);
             }
-
-            System.out.println(Thread.currentThread() + " release lock again.@ " +
-                    new SimpleDateFormat("HH:mm:ss").format(new Date()));
-
         }
     }
 
