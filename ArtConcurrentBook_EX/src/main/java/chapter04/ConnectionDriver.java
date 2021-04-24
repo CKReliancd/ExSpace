@@ -9,21 +9,20 @@ import java.util.concurrent.TimeUnit;
 public class ConnectionDriver {
 
     public static final Connection createConnection() {
-        return (Connection) Proxy.newProxyInstance(
-                ConnectionDriver.class.getClassLoader(),
-                Connection.class.getInterfaces(),
-                new InvocationHandler() {
-                    @Override
-                    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-                        if (method.getName().equals("commit")) {
-                            try {
-                                TimeUnit.MILLISECONDS.sleep(100);
-                            } catch (Exception e) {
-                            }
+        Connection connection = (Connection) Proxy.newProxyInstance(Connection.class.getClassLoader(),
+                new Class[]{Connection.class},
+                new ConnectionHandler()
+        );
+        return connection;
+    }
 
-                        }
-                        return null;
-                    }
-                });
+    static class ConnectionHandler implements InvocationHandler {
+        @Override
+        public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+            if (method.getName().equals("commit")) {
+                TimeUnit.MILLISECONDS.sleep(100);
+            }
+            return null;
+        }
     }
 }
