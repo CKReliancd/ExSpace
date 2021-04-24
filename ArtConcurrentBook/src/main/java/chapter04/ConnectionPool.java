@@ -36,7 +36,6 @@ public class ConnectionPool {
                 while (pool.isEmpty()) {
                     pool.wait();
                 }
-
                 return pool.removeFirst();
             } else {
                 long future = System.currentTimeMillis() + mills;
@@ -47,9 +46,11 @@ public class ConnectionPool {
                 }
 
                 Connection result = null;
-                if (!pool.isEmpty()) {
-                    result = pool.removeFirst();
+                if (pool.isEmpty()) {
+                    return result;
                 }
+
+                result = pool.removeFirst();
                 return result;
             }
         }

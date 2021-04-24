@@ -8,7 +8,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 6-18
  */
 public class ConnectionPoolTest {
-    static ConnectionPool pool  = new ConnectionPool(10);
+    static ConnectionPool pool = new ConnectionPool(10);
     // 保证所有ConnectionRunner能够同时开始
     static CountDownLatch start = new CountDownLatch(1);
     // main线程将会等待所有ConnectionRunner结束后才能继续执行
@@ -16,13 +16,14 @@ public class ConnectionPoolTest {
 
     public static void main(String[] args) throws Exception {
         // 线程数量，可以线程数量进行观察
-        int threadCount = 50;
+        int threadCount = 20;
         end = new CountDownLatch(threadCount);
         int count = 20;
         AtomicInteger got = new AtomicInteger();
         AtomicInteger notGot = new AtomicInteger();
-        for (int i = 0; i < threadCount; i++) {
-            Thread thread = new Thread(new ConnetionRunner(count, got, notGot), "ConnectionRunnerThread");
+        for (int i = 0; i < 10; i++) {
+            Thread thread = new Thread(new ConnectionRunner(count, got,
+                    notGot), String.valueOf(i));
             thread.start();
         }
         start.countDown();
@@ -32,12 +33,12 @@ public class ConnectionPoolTest {
         System.out.println("not got connection " + notGot);
     }
 
-    static class ConnetionRunner implements Runnable {
-        int           count;
+    static class ConnectionRunner implements Runnable {
+        int count;
         AtomicInteger got;
         AtomicInteger notGot;
 
-        public ConnetionRunner(int count, AtomicInteger got, AtomicInteger notGot) {
+        public ConnectionRunner(int count, AtomicInteger got, AtomicInteger notGot) {
             this.count = count;
             this.got = got;
             this.notGot = notGot;
