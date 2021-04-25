@@ -1,4 +1,4 @@
-package ex01;
+package ex.ex01;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
