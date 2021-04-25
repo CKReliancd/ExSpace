@@ -1,4 +1,4 @@
-package chapter04;
+package chapter04.connection;
 
 import java.sql.Connection;
 import java.util.concurrent.CountDownLatch;
