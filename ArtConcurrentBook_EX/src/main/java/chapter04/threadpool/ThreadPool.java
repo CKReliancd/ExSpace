@@ -1,9 +1,9 @@
 package chapter04.threadpool;
 
-public interface Thread<Job extends Runnable> {
+public interface ThreadPool<Job extends Runnable> {
 
     // 执行一个job，这个Job需要实现Runnable
-    void execute(Job joa);
+    void execute(Job job);
 
     // 关闭线程池
     void shutDown();
