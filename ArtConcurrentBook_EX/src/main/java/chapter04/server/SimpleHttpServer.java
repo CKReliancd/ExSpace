@@ -1,6 +1,10 @@
 package chapter04.server;
 
+import chapter04.threadpool.DefaultThreadPool;
+import chapter04.threadpool.ThreadPool;
+
 import java.io.*;
+import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
@@ -10,10 +14,46 @@ import java.net.Socket;
  */
 public class SimpleHttpServer {
 
+    // 处理HttpRequest的线程池
+    static ThreadPool<HttpRequestHandler> threadPool =
+            new DefaultThreadPool<>(1);
     // SimpleHttpServer的根路径
     static String basePath;
+    static ServerSocket serverSocket;
+    // 服务监听端口
+    static int port = 8080;
+
+    public static void setPort(int port) {
+        if (port > 0) {
+            SimpleHttpServer.port = port;
+        }
+    }
+
+    public static void setBasePath(String basePath) {
+        if (basePath != null &&
+                new File(basePath).exists() &&
+                new File(basePath).isDirectory()) {
+            SimpleHttpServer.basePath = basePath;
+        }
+    }
+
+    /**
+     * 启动SimpleHttpServer
+     *
+     * @throws Exception
+     */
+    public static void start() throws Exception {
+        serverSocket = new ServerSocket(port);
+        Socket socket;
+        while ((socket = serverSocket.accept()) != null) {
+            // 接收客户端Socket，生成一个HttpRequestHandler,放入线程池中执行
+            threadPool.execute(new HttpRequestHandler(socket));
+        }
+        serverSocket.close();
+    }
 
     static class HttpRequestHandler implements Runnable {
+
         private Socket socket;
 
         public HttpRequestHandler(Socket socket) {
