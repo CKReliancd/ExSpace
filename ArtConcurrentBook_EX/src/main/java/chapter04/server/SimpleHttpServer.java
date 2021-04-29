@@ -37,14 +37,24 @@ public class SimpleHttpServer {
         }
     }
 
+    public static void main(String[] args) throws Exception {
+
+        SimpleHttpServer server = new SimpleHttpServer();
+
+        server.setBasePath("D:/WorkSpace/ExSpace/ArtConcurrentBook_EX/src" +
+                "/main/java/chapter04/server/SimpleHttpServer");
+
+        server.start();
+    }
+
     /**
      * 启动SimpleHttpServer
      *
      * @throws Exception
      */
     public static void start() throws Exception {
-        serverSocket = new ServerSocket(port);
         Socket socket;
+        serverSocket = new ServerSocket(port);
         while ((socket = serverSocket.accept()) != null) {
             // 接收客户端Socket，生成一个HttpRequestHandler,放入线程池中执行
             threadPool.execute(new HttpRequestHandler(socket));

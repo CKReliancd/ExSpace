@@ -32,7 +32,7 @@ public class Response {
         FileInputStream fileInputStream = null;
         try {
 //            File file = new File("C:\\Program Files\\A学习文档\\ExSpace\\TomcatEx\\src\\main\\webroot"+File.separator, request.getUri());
-            File file = new File("C:\\Program Files\\A学习文档\\ExSpace\\TomcatEx\\src\\main\\webroot\\index.html");
+            File file = new File("D:\\WorkSpace\\ExSpace\\TomcatEx\\src\\main\\webroot\\index.html");
             if (file.exists()) {
                 fileInputStream = new FileInputStream(file);
                 int ch = fileInputStream.read(bytes, 0, BUFFER_SIZE);
