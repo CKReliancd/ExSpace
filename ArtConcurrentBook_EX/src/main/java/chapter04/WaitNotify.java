@@ -35,6 +35,7 @@ public class WaitNotify {
                             new SimpleDateFormat("HH:mm:ss").format(new Date()));
 
                     try {
+                        //wait暂停，等待其他线程notify并释放锁才回来
                         lock.wait();
                     } catch (InterruptedException e) {
                     }

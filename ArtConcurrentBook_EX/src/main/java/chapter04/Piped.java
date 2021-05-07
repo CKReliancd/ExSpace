@@ -8,23 +8,24 @@ public class Piped {
 
     public static void main(String[] args) throws IOException {
 
-        PipedWriter out = new PipedWriter();
-        PipedReader in = new PipedReader();
+        PipedWriter writer = new PipedWriter();
+        PipedReader reader = new PipedReader();
         //将输入输出流进行连接，否则会在使用的时候抛出IOException
-        in.connect(out);
-        Thread printThread = new Thread(new Print(in), "PrintThread");
+        reader.connect(writer);
+        Thread printThread = new Thread(new Print(reader), "PrintThread");
         printThread.start();
         int receive = 0;
         try {
             while ((receive = System.in.read()) != -1) {
-                out.write(receive);
+                writer.write(receive);
             }
         } finally {
-            out.close();
+            writer.close();
         }
     }
 
     static class Print implements Runnable {
+
         private PipedReader in;
 
         public Print(PipedReader in) {
@@ -36,13 +37,12 @@ public class Piped {
             int receive = 0;
             while (true) {
                 try {
-                    if (!((receive = in.read()) != -1)) break;
+                    receive = in.read();
+                    if (receive == -1) break;
                 } catch (IOException e) {
                 }
                 System.out.print((char) receive);
             }
         }
     }
-
-
 }
