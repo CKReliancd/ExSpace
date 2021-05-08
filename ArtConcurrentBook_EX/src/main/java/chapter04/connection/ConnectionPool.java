@@ -30,12 +30,10 @@ public class ConnectionPool {
                     pool.wait(remaining);
                     remaining = future - System.currentTimeMillis();
                 }
-
                 Connection result = null;
                 if (pool.isEmpty()) {
                     return result;
                 }
-
                 result = pool.removeFirst();
                 return result;
             }
