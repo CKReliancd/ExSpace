@@ -15,8 +15,7 @@ import java.net.Socket;
 public class SimpleHttpServer {
 
     // 处理HttpRequest的线程池
-    static ThreadPool<HttpRequestHandler> threadPool =
-            new DefaultThreadPool<>(1);
+    static ThreadPool<HttpRequestHandler> threadPool = new DefaultThreadPool<>(1);
     // SimpleHttpServer的根路径
     static String basePath;
     static ServerSocket serverSocket;
@@ -38,6 +37,8 @@ public class SimpleHttpServer {
     }
 
     public static void main(String[] args) throws Exception {
+
+        int processors = Runtime.getRuntime().availableProcessors();
 
         SimpleHttpServer server = new SimpleHttpServer();
 
