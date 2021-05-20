@@ -18,6 +18,7 @@
         <module>ArtConcurrentBook</module>
         <module>ArtConcurrentBook_EX</module>
         <module>Flink</module>
+        <module>Reflect</module>
     </modules>
 
     <properties>
