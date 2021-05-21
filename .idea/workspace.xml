@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="62212d59-de34-4122-9824-346e601d609c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Reflection/src/main/java/com/hsp/ReflectionQuestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExSpace.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ExSpace.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reflection/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reflection/src/main/java/com/hspedu/bean/Cat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reflection/src/main/java/com/hspedu/question/ReflectionQuestion.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/Reflection">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="ExSpace" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:/Program Files/server/apache-maven-3.5.4" />
+        <option name="userSettingsFile" value="D:\Server\apache-maven-3.6.2\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx1024m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8" />
+  </component>
+  <component name="ProjectId" id="1ozz4BsyjbDY07pciw5aItGjmAh" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8.0_201" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Reflection/src/main/resources" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15039062" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="atguigu.exer" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WorkSpace\ExSpace\Reflection\src\main\resources" />
+      <recent name="D:\WorkSpace\ExSpace\Reflection\src\main\java" />
+      <recent name="D:\WorkSpace\ExSpace\DataStruct_EX\src\main\java\atguigu" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="chapter04" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WorkSpace\ExSpace\Reflection\src\main\resources" />
+      <recent name="D:\WorkSpace\ExSpace\Reflection\src\main\java" />
+      <recent name="D:\WorkSpace\ExSpace\Reflection\src\main\java\com\hspedu\question" />
+      <recent name="D:\WorkSpace\ExSpace\Reflection\src" />
+      <recent name="D:\WorkSpace\ExSpace\ArtConcurrentBook_EX\src\main\java\chapter04\server" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ReflectionQuestion">
+    <configuration name="Piped" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chapter04.Piped" />
+      <module name="ArtConcurrentBook_EX" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter04.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReflectionQuestion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hsp.ReflectionQuestion" />
+      <module name="Reflection.main" />
+      <shortenClasspath name="MANIFEST" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hsp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleHttpServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chapter04.server.SimpleHttpServer" />
+      <module name="ArtConcurrentBook_EX" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter04.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WaitNotify" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chapter04.WaitNotify" />
+      <module name="ArtConcurrentBook_EX" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter04.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Piped" />
+      <item itemvalue="Application.SimpleHttpServer" />
+      <item itemvalue="Application.WaitNotify" />
+      <item itemvalue="Application.ReflectionQuestion" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ReflectionQuestion" />
+        <item itemvalue="Application.SimpleHttpServer" />
+        <item itemvalue="Application.Piped" />
+        <item itemvalue="Application.WaitNotify" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="62212d59-de34-4122-9824-346e601d609c" name="Default Changelist" comment="" />
+      <created>1614304013663</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614304013663</updated>
+      <workItem from="1614304018177" duration="9332000" />
+      <workItem from="1614322655742" duration="1081000" />
+      <workItem from="1614330887347" duration="947000" />
+      <workItem from="1614929087918" duration="2654000" />
+      <workItem from="1615170355676" duration="12155000" />
+      <workItem from="1616052754736" duration="1324000" />
+      <workItem from="1616066550354" duration="2262000" />
+      <workItem from="1616143325411" duration="1186000" />
+      <workItem from="1616469942899" duration="1185000" />
+      <workItem from="1616999503555" duration="339000" />
+      <workItem from="1616999856034" duration="14000" />
+      <workItem from="1617003162850" duration="5017000" />
+      <workItem from="1617085087170" duration="1126000" />
+      <workItem from="1617087247334" duration="583000" />
+      <workItem from="1617261741224" duration="3028000" />
+      <workItem from="1617935989363" duration="4569000" />
+      <workItem from="1618191127206" duration="8210000" />
+      <workItem from="1618884785846" duration="324000" />
+      <workItem from="1619093979322" duration="1329000" />
+      <workItem from="1619156837362" duration="9832000" />
+      <workItem from="1619315380145" duration="1153000" />
+      <workItem from="1619402890294" duration="12638000" />
+      <workItem from="1619489488737" duration="2803000" />
+      <workItem from="1619501842832" duration="616000" />
+      <workItem from="1619524211767" duration="53000" />
+      <workItem from="1619680451923" duration="2598000" />
+      <workItem from="1619683434624" duration="1592000" />
+      <workItem from="1619685399917" duration="3736000" />
+      <workItem from="1620270000221" duration="5343000" />
+      <workItem from="1620438941540" duration="2567000" />
+      <workItem from="1620789285047" duration="4867000" />
+      <workItem from="1621423031898" duration="11873000" />
+      <workItem from="1621504733381" duration="847000" />
+      <workItem from="1621561437852" duration="734000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="179" key="#Project_Structure" timestamp="1621561828888">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="179" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1621561828888" />
+    <state x="653" y="177" key="#ReflectionQuestion" timestamp="1621561292089">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="653" y="177" key="#ReflectionQuestion/0.0.1920.1040@0.0.1920.1040" timestamp="1621561292089" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621562179263">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1621562179263" />
+    <state x="713" y="221" key="#com.intellij.ide.util.MemberChooser" timestamp="1620789753018">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="713" y="221" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1620789753018" />
+    <state x="648" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1621503002494">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="648" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1621503002494" />
+    <state x="629" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1619402908988">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="629" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1619402908988" />
+    <state x="1036" y="76" width="836" height="601" key="#xdebugger.evaluate" timestamp="1621303330146">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1036" y="76" width="836" height="601" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1621303330146" />
+    <state x="560" y="113" key="CommitChangelistDialog2" timestamp="1615170919691">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="560" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1615170919691" />
+    <state width="493" height="466" key="DebuggerActiveHint" timestamp="1619170865041">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="493" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1619170865041" />
+    <state x="862" y="238" key="FileChooserDialogImpl" timestamp="1621504813897">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="862" y="238" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1621504813897" />
+    <state width="1877" height="366" key="GridCell.Tab.0.bottom" timestamp="1621562209485">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="366" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1621562209485" />
+    <state width="1877" height="366" key="GridCell.Tab.0.center" timestamp="1621562209485">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="366" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1621562209485" />
+    <state width="1877" height="366" key="GridCell.Tab.0.left" timestamp="1621562209485">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="366" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1621562209485" />
+    <state width="1877" height="366" key="GridCell.Tab.0.right" timestamp="1621562209485">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="366" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1621562209485" />
+    <state x="490" y="175" key="Maven.ArtifactSearchDialog" timestamp="1617006511729">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="490" y="175" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1617006511729" />
+    <state x="722" y="245" width="725" height="604" key="NewModule_or_Project.wizard" timestamp="1619684378133">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="722" y="245" width="725" height="604" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1619684378133" />
+    <state x="327" y="108" width="1243" height="771" key="SettingsEditor" timestamp="1621561364085">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="327" y="108" width="1243" height="771" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1621561364085" />
+    <state x="731" y="238" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1617003823374">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="731" y="238" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1617003823374" />
+    <state x="793" y="260" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1618216567148">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="793" y="260" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040@0.0.1920.1040" timestamp="1618216567148" />
+    <state x="690" y="274" key="extract.method.dialog" timestamp="1615172342309">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="274" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1615172342309" />
+    <state x="636" y="253" width="647" height="534" key="find.popup" timestamp="1619419222771">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="636" y="253" width="647" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1619419222771" />
+    <state x="334" y="221" key="new project wizard" timestamp="1621561764116">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="334" y="221" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1621561764116" />
+    <state x="257" y="143" key="refactoring.ChangeSignatureDialog" timestamp="1619405802312">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="257" y="143" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1619405802312" />
+    <state x="616" y="173" width="672" height="676" key="search.everywhere.popup" timestamp="1620453389736">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="173" width="672" height="676" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1620453389736" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DataStruct_EX/src/main/java/com/atguigu/search/InterpolationSearch.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Java8/src/main/java/com/atguigu/exer2/PredicateDemo.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/ArtConcurrentBook_EX/src/main/java/ex/ex01/Test.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/ArtConcurrentBook_EX/src/main/java/ex/ex01/Test.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/ArtConcurrentBook_EX/src/main/java/ex/ex01/Test.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/ArtConcurrentBook_EX/src/main/java/ex/ex01/Test.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/ArtConcurrentBook_EX/src/main/java/chapter04/server/SimpleHttpServer.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/ArtConcurrentBook_EX/src/main/java/chapter04/server/SimpleHttpServer.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/ArtConcurrentBook_EX/src/main/java/chapter04/threadpool/DefaultThreadPool.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/ArtConcurrentBook_EX/src/main/java/chapter04/threadpool/DefaultThreadPool.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/ArtConcurrentBook_EX/src/main/java/chapter04/threadpool/DefaultThreadPool.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/ArtConcurrentBook_EX/src/main/java/chapter04/threadpool/DefaultThreadPool.java</url>
+          <line>139</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/ArtConcurrentBook_EX/src/main/java/chapter04/server/SimpleHttpServer.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/Reflection/src/main/java/com/hsp/ReflectionQuestion.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-defaults>
+        <breakpoint suspend="THREAD" type="java-line" />
+      </breakpoints-defaults>
+    </breakpoint-manager>
+  </component>
+</project>

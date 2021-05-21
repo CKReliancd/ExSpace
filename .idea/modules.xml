@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Algorithm/Algorithm.iml" filepath="$PROJECT_DIR$/Algorithm/Algorithm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ArtConcurrentBook/ArtConcurrentBook.iml" filepath="$PROJECT_DIR$/ArtConcurrentBook/ArtConcurrentBook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ArtConcurrentBook_EX/ArtConcurrentBook_EX.iml" filepath="$PROJECT_DIR$/ArtConcurrentBook_EX/ArtConcurrentBook_EX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DataStruct_EX/DataStruct_EX.iml" filepath="$PROJECT_DIR$/DataStruct_EX/DataStruct_EX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DataStructures/DataStructures.iml" filepath="$PROJECT_DIR$/DataStructures/DataStructures.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ExSpace.iml" filepath="$PROJECT_DIR$/ExSpace.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Flink/Flink.iml" filepath="$PROJECT_DIR$/Flink/Flink.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HowTomcatWorks/HowTomcatWorks.iml" filepath="$PROJECT_DIR$/HowTomcatWorks/HowTomcatWorks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java8/Java8.iml" filepath="$PROJECT_DIR$/Java8/Java8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JucEx/JucEx.iml" filepath="$PROJECT_DIR$/JucEx/JucEx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TomcatEx/TomcatEx.iml" filepath="$PROJECT_DIR$/TomcatEx/TomcatEx.iml" />
+    </modules>
+  </component>
+</project>

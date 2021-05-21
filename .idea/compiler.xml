@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Algorithm" target="1.8" />
+      <module name="ArtConcurrentBook" target="1.8" />
+      <module name="ArtConcurrentBook_EX" target="1.8" />
+      <module name="DataStruct_EX" target="1.8" />
+      <module name="DataStructures" target="1.8" />
+      <module name="ExSpace" target="1.8" />
+      <module name="Flink" target="1.8" />
+      <module name="Java8" target="1.8" />
+      <module name="JucEx" target="1.8" />
+      <module name="Reflect" target="1.8" />
+      <module name="TomcatEx" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
