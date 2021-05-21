@@ -1,8 +1,9 @@
-package com.hsp;
+package com.hsp.question;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Properties;
@@ -17,7 +18,15 @@ public class ReflectionQuestion {
             IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
 
         Properties properties = new Properties();
-        properties.load(new FileInputStream("src\\main\\resources"));
+
+        //ClassLoader.getResource()的资源获取不能以 / 开头，统一从根路径开始搜索资源。
+        FileInputStream fi = new FileInputStream(ClassLoader.getSystemClassLoader()
+                .getResource("re.properties").getPath());
+
+        InputStream resourceAsStream = Thread.currentThread()
+                .getContextClassLoader().getResourceAsStream("re.properties");
+
+        properties.load(fi);
 
         String classfullpath = properties.getProperty("classfullpath");
         String methodName = properties.getProperty("method");
