@@ -7,7 +7,11 @@ package com.hsp;
  */
 public class Cat {
 
-    private String name = "Cat";
+    public String name = "Cat";
+
+    public String brand = "²¨Ë¹Ã¨";
+
+    public String price = "20000";
 
     public void hi() {
         System.out.println("Hello " + name);
@@ -17,5 +21,12 @@ public class Cat {
         System.out.println(name + " cry!");
     }
 
-
+    @Override
+    public String toString() {
+        return "Cat{" +
+                "name='" + name + '\'' +
+                ", brand='" + brand + '\'' +
+                ", price='" + price + '\'' +
+                '}';
+    }
 }

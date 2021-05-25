@@ -2,6 +2,8 @@ package com.hsp.classes;
 
 import com.hsp.Cat;
 
+import java.lang.reflect.Field;
+
 /**
  * @author Administrator
  * @Description
@@ -9,7 +11,7 @@ import com.hsp.Cat;
  */
 public class Class01 {
 
-    public static void main(String[] args) throws ClassNotFoundException {
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException, InstantiationException {
 
         /**
          * JVM只会创建一次对象的ClassLoader然后放在缓存中 ,
@@ -21,7 +23,15 @@ public class Class01 {
          */
         Cat cat = new Cat();
 
-        Class<?> aClass = Class.forName("com.hsp.Cat");
+        Class<?> cls = Class.forName("com.hsp.Cat");
+
+        Object o = cls.newInstance();
+
+        Field brand = cls.getField("brand");
+
+        brand.set(o, "无毛猫");
+
+        System.out.println(brand.get(o));
 
 
     }
