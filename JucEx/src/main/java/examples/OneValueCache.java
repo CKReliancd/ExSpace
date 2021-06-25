@@ -1,7 +1,6 @@
 package examples;
 
-import net.jcip.annotations.Immutable;
-
+import javax.annotation.concurrent.Immutable;
 import java.math.BigInteger;
 import java.util.Arrays;
 

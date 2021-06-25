@@ -1,6 +1,6 @@
 package examples;
 
-import net.jcip.annotations.*;
+import javax.annotation.concurrent.NotThreadSafe;
 
 /**
  * MutableInteger

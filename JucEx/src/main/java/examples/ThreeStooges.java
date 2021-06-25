@@ -1,7 +1,6 @@
 package examples;
 
-import net.jcip.annotations.Immutable;
-
+import javax.annotation.concurrent.Immutable;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
