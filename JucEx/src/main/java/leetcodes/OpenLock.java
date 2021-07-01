@@ -7,16 +7,16 @@ import java.util.*;
  * @Description
  * @Date 2021/6/25 16:18
  */
-public class Solution {
+public class OpenLock {
 
     public static void main(String[] args) {
 
         String[] deadends = {"0201", "0101", "0102", "1212", "2002"};
         String target = "0202";
 
-        Solution solution = new Solution();
+        OpenLock openLock = new OpenLock();
 
-        int i = solution.openLock(deadends, target);
+        int i = openLock.openLock(deadends, target);
 
         System.out.println(i);
 
@@ -50,9 +50,7 @@ public class Solution {
                 String status = queue.poll();
                 List<String> statusList = get(status);
                 for (String nextStatus : statusList) {
-                    boolean nonExistSeen = !seen.contains(nextStatus);
-                    boolean nonExistDead = !dead.contains(nextStatus);
-                    if (nonExistSeen && nonExistDead) {
+                    if (!seen.contains(nextStatus) && !dead.contains(nextStatus)) {
                         if (nextStatus.equals(target)) {
                             return step;
                         }
@@ -62,7 +60,6 @@ public class Solution {
                 }
             }
         }
-
         return -1;
     }
 
