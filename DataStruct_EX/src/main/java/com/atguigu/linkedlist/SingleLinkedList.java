@@ -76,27 +76,19 @@ public class SingleLinkedList {
      * @param heroNode
      */
     public static void reverseList(HeroNode heroNode) {
-
         if (heroNode.next == null || heroNode.next.next == null) {
             return;
         }
-
         HeroNode cur = heroNode.next;
-
         //当前操作节点的下一个节点
         HeroNode next = null;
-
         HeroNode reverseHead = new HeroNode(0, "", "");
-
         while (cur != null) {
             next = cur.next;
-
             cur.next = reverseHead.next;
             reverseHead.next = cur;
-
             cur = next;
         }
-
         heroNode.next = reverseHead.next;
     }
 

@@ -1,4 +1,4 @@
-package leetcodes;
+package leetcode.openlock;
 
 import java.util.*;
 
@@ -7,18 +7,21 @@ import java.util.*;
  * @Description
  * @Date 2021/6/25 16:18
  */
-public class OpenLock {
+public class BreathFirstOpenLock {
 
     public static void main(String[] args) {
 
         String[] deadends = {"0201", "0101", "0102", "1212", "2002"};
         String target = "0202";
 
-        OpenLock openLock = new OpenLock();
 
-        int i = openLock.openLock(deadends, target);
+        BreathFirstOpenLock bfsOpenLock = new BreathFirstOpenLock();
 
-        System.out.println(i);
+        long start = System.currentTimeMillis();
+        int i = bfsOpenLock.openLock(deadends, target);
+        long end = System.currentTimeMillis();
+
+        System.out.println(end - start);
 
     }
 
