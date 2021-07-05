@@ -7,15 +7,14 @@ import java.util.*;
  * @Description
  * @Date 2021/6/25 16:18
  */
-public class BreathFirstOpenLock {
+public class BreadthFirstOpenLock {
 
     public static void main(String[] args) {
 
         String[] deadends = {"0201", "0101", "0102", "1212", "2002"};
         String target = "0202";
 
-
-        BreathFirstOpenLock bfsOpenLock = new BreathFirstOpenLock();
+        BreadthFirstOpenLock bfsOpenLock = new BreadthFirstOpenLock();
 
         long start = System.currentTimeMillis();
         int i = bfsOpenLock.openLock(deadends, target);
@@ -49,10 +48,11 @@ public class BreathFirstOpenLock {
             ++step;
             int size = queue.size();
             for (int i = 0; i < size; ++i) {
-                //当前搜索到的数字
+                //当前搜索到的排列
                 String status = queue.poll();
-                List<String> statusList = get(status);
-                for (String nextStatus : statusList) {
+                //当前搜索到的排列旋转一次能得到的排列
+                List<String> nextStatusList = get(status);
+                for (String nextStatus : nextStatusList) {
                     if (!seen.contains(nextStatus) && !dead.contains(nextStatus)) {
                         if (nextStatus.equals(target)) {
                             return step;
